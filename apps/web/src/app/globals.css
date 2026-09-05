@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: theme('colors.background');
+  color: theme('colors.primary');
+  background-image: theme('backgroundImage.grid-pattern');
+  background-attachment: fixed;
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+code, .geist-mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+/* Custom scrollbar for terminal/cinematic feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.hairline');
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.muted');
+}
